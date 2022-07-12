@@ -1,0 +1,25 @@
+{
+  "name": "bodywatch",
+  "version": "1.0.0",
+  "description": "Bodywatch app.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "watch": "nodemon src/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@gitlab.com/prusakowski.michael/bodywatch.git"
+  },
+  "author": "Michael Prusakowski",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://gitlab.com/prusakowski.michael/bodywatch/issues"
+  },
+  "homepage": "https://gitlab.com/prusakowski.michael/bodywatch#readme",
+  "dependencies": {
+    "dotenv": "^16.0.1",
+    "express": "^4.18.1",
+    "nodemon": "^2.0.19"
+  }
+}
