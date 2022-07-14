@@ -2,11 +2,14 @@
   "name": "bodywatch",
   "version": "1.0.0",
   "description": "Bodywatch app.",
-  "main": "index.js",
+  "main": "build/src/Index.js",
   "scripts": {
-    "start": "node src/index.js",
-    "watch": "nodemon src/index.js",
-    "test": "node tests/testRunner.js"
+    "start": "node build/src/Index.js",
+    "test": "node build/tests/TestRunner.js",
+    "build": "tsc",
+    "watch:src": "tsc --watch",
+    "watch:build": "nodemon -q dist/src/Index.js",
+    "watch": "concurrently \"npm run watch:src\" \"npm run watch:build\""
   },
   "repository": {
     "type": "git",
@@ -19,8 +22,13 @@
   },
   "homepage": "https://gitlab.com/prusakowski.michael/bodywatch#readme",
   "dependencies": {
+    "concurrently": "^7.2.2",
     "dotenv": "^16.0.1",
-    "express": "^4.18.1",
-    "nodemon": "^2.0.19"
+    "express": "^4.18.1"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.13",
+    "nodemon": "^2.0.19",
+    "typescript": "^4.7.4"
   }
 }
